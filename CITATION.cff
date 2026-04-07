@@ -3,11 +3,11 @@ message: "Please cite as below."
 authors:
   - family-names: "Matos-Wiederhold"
     given-names: "Tonatiuh"
-title: "Title"
+title: "Infinitary Amoebas"
 version: 1.0.0
 doi: ""
 date-released: 2026-
-url: "https://tonamatos.github.io/"
+url: "https://tonamatos.github.io/InfinitaryAmoebas/main.pdf"
 preferred-citation:
   type: article
   authors:
