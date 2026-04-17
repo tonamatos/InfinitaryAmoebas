@@ -14,35 +14,17 @@
 
 \section{Introduction}\label{sec:inf-amoebas-intro}
 
-There are several reasons why studying countable graphs is desirable, but they can all be somewhat summarized by the fact that if $X$ is countable, $X^X$ is a separable, completely metrizable topological space.
+There are multiple reasons why studying countable graphs is desirable in this context, but they can all be somewhat summarized by the fact that if $X$ is countable, $X^X$ is a separable, completely metrizable topological space.
 Two particularly interesting issues arise in the case when $X$ is uncountable, which I present in Section~\ref{sec:uncountable-graphs}.
 
 \section{Preliminaries}\label{sec:inf-amoebas-prelim}
 
-
-
-\section{Uncountable graphs}\label{sec:uncountable-graphs}
-
-Automorphisms, and by extension, feasible edge-replacements, need not be approximable by a sequence of automorphisms in a given set, even when said automorphism is topologically close.
-
-\begin{proposition}\label{prop:aut_closure_not_seq}
-    Let $G$ be the graph on the vertex set $2^\omega$ with edges $(x,y)$ where $x\restriction_{\omega\setminus 1}\neq y\restriction_{\omega\setminus 1}$.
-    
-    Consider the map $s\colon2^\omega\to2^\omega$ that flips the first bit of an infinite binary sequence, that is, for every $x\in2^\omega$, $s(i^\frown x):=(1-i)^\frown x$.
-    For each finite set $F\subseteq2^\omega$, define $$\sigma_F(x):=\begin{cases}
-        s(x),&x\in F;\\
-        x,&x\notin F.
-    \end{cases}$$
-
-    It is straightforward to show that $\{\sigma_F:F\in[2^\omega]^{<\omega}\}\cup\{s\}\subseteq A(G)=\Fer(G)$.
-\end{proposition}
-
 \section{Countable graphs}\label{sec:countable-graphs}
 
-For this section, assume that $G$ is a graph defined on an infinite countable set $X$.
-In this case, $X^X$ is homeomorphic with the Baire space $\omega^\omega$, and so we are dealing with separable and completely metrizable spaces (i.e.\ Polish spaces).
-One can show that $S_X$, being a $G_\delta$ subspace of the Baire space, is also Polish and thus its topology is induced by a complete metric. Indeed, observe that $$S_X=\bigcap_{\substack{x,y\in X \\ x\neq y}}\{f\in X^X:f(n)\neq f(m)\}\cap\bigcap_{y\in X}\bigcup_{x\in X}\{f\in X^X:f(x)=y\}$$ is a countable (whenever $X$ is) intersection of open sets.
-Giving an explicit complete metric is done in the example at the end of the section.
+For this section, assume that $G$ is a graph defined on a countably infinite set $X$.
+In this case, $X^X$ is homeomorphic with the Baire space $\omega^\omega$, and so we are dealing with separable and completely metrizable spaces (i.e.\ \emph{Polish spaces}).
+One can show that $S_X$, being a $G_\delta$ subspace of the Baire space, is also Polish and thus its topology is induced by a complete metric. Indeed, observe that $$S_X=\bigcap_{\substack{x,y\in X \\ x\neq y}}\{f\in X^X:f(n)\neq f(m)\}\cap\bigcap_{y\in X}\bigcup_{x\in X}\{f\in X^X:f(x)=y\}$$ is a countable intersection of open sets.
+An explicit example of a complete metric is exhibited at the end of the section.
 
 Group actions on graphs may be quite different in the infinite case.
 For instance, consider the automorphism of a random graph. \textcolor{orange}{Missing references.
@@ -169,11 +151,25 @@ Moreover, $A_\infty$ is a tree.
 Let $F$ be a nonempty finite set of positive naturals and $\varphi\in S_\mathbb N$.
 Take $n:=\lceil\log_2\max(F\cup\varphi[F])\rceil$.
 
+\section{Uncountable graphs}\label{sec:uncountable-graphs}
+
+Automorphisms, and by extension, feasible edge-replacements, need not be approximable by a sequence of automorphisms in a given set, even when said automorphism is topologically close.
+
+\begin{proposition}\label{prop:aut_closure_not_seq}
+    Let $G$ be the graph on the vertex set $2^\omega$ with edges $(x,y)$ where $x\restriction_{\omega\setminus 1}\neq y\restriction_{\omega\setminus 1}$.
+    
+    Consider the map $s\colon2^\omega\to2^\omega$ that flips the first bit of an infinite binary sequence, that is, for every $x\in2^\omega$, $s(i^\frown x):=(1-i)^\frown x$.
+    For each finite set $F\subseteq2^\omega$, define $$\sigma_F(x):=\begin{cases}
+        s(x),&x\in F;\\
+        x,&x\notin F.
+    \end{cases}$$
+
+    It is straightforward to show that $\{\sigma_F:F\in[2^\omega]^{<\omega}\}\cup\{s\}\subseteq A(G)=\Fer(G)$.
+\end{proposition}
+
 \section{Open questions}
 
 Can the Fer groups that are amenable be nicely classified the way the Aut group of trees is nicely classified?
-
-By a result of Frucht, every finite group is the automorphism group of a regular graph, and thus, since for regular graphs the Fer group is Aut, every finite group is trivially realized as the Fer group of a finite graph. Sabidussi 1959 (https://link.springer.com/content/pdf/10.1007/BF01319053.pdf) proved the analogue result for infinite groups: any group is realized as the aut group of a graph of arbitrary given cardinal. Is any infinite group realized as the Fer of some infinite graph?
 
 %Bibliography
 \nocite{*}
